@@ -9,10 +9,7 @@ const signOutBtn = document.getElementById("signOut");
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    //   const uid = user.uid;
-    // ...
+    return;
   } else {
     // User is signed out
     location.replace("../index.html");
@@ -21,11 +18,6 @@ onAuthStateChanged(auth, (user) => {
 
 signOutBtn.addEventListener("click", function () {
   signOut(auth);
-  // .then(() => {
-  //   // Sign-out successful.
-  // }).catch((error) => {
-  //   // An error happened.
-  // });
 });
 
 attendanceSheet.addEventListener("click", function () {
